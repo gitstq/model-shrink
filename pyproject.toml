@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modelshrink"
+version = "1.0.0"
+description = "Lightweight neural-network compression toolbox: quantization, pruning and knowledge distillation in pure NumPy"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "gitstq" }]
+keywords = [
+    "model-compression",
+    "quantization",
+    "pruning",
+    "knowledge-distillation",
+    "neural-network",
+    "numpy",
+    "machine-learning",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["numpy>=1.21"]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.4"]
+dev = ["matplotlib>=3.4", "build>=0.10"]
+
+[project.scripts]
+modelshrink = "modelshrink.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/gitstq/model-shrink"
+Repository = "https://github.com/gitstq/model-shrink"
+Issues = "https://github.com/gitstq/model-shrink/issues"
+
+[tool.setuptools.packages.find]
+include = ["modelshrink*"]

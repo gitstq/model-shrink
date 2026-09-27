@@ -1,0 +1,5 @@
+# Development / extras (optional). The core library and `modelshrink demo`
+# only need numpy from requirements.txt.
+-r requirements.txt
+matplotlib>=3.4   # optional: --plots charts
+build>=0.10       # optional: build sdist/wheel
